@@ -1,25 +1,50 @@
-// Lógica de Programação
-// Problema: obter três notas de um aluno, calcular a média,
-// exibir a média e exibir a situação do aluno: aprovado,
-// em exame ou reprovado.
+function mediaAluno() {
+    
+    // Lógica de Programação
+    // Problema: obter três notas de um aluno, calcular a média,
+    // exibir a média e exibir a situação do aluno: aprovado,
+    // em exame ou reprovado.
+    
+    console.log('Início do programa');
+    
+    // Declaração das variáveis
+    
+    const nota1 = parseInt(document.getElementById('nota1').value);
+    const nota2 = parseInt(document.getElementById('nota2').value);
+    const nota3 = parseInt(document.getElementById('nota3').value); 
+    
+    // Calculo da Média
+    const media = (nota1 + nota2 + nota3) / 3;
+    
+    console.log('A nota 1 é:' , nota1);
+    
+    console.log('A nota 2 é:' , nota2);
+    
+    console.log('A nota 3 é:' , nota3);
 
-console.log('Início do programa');
+    document.getElementById('resultado').innerHTML = 'A media do aluno é:' + media + '<br>';
 
-// Declaração das variáveis
 
-const nota1 = parseInt(prompt() );
-const nota2 = parseInt(prompt() );
-const nota3 = parseInt(prompt() ); 
+    
+    if (media >= 7) {
+        
+        
+    document.getElementById('situacao').innerHTML += 'situaçaõ: Aprovado' 
+    console.log('APROVADO');
 
-// Calculo da Média
-const media = (nota1 + nota2 + nota3) / 3;
+} else if (media >= 5) {
 
-console.log('A nota 1 é:' , nota1);
+    document.getElementById('situacao').innerHTML += 'situaçaõ: Recuperação'
+    console.log('RECUPERAÇÃO');
 
-console.log('A nota 2 é:' , nota2);
+} else {
 
-console.log('A nota 3 é:' , nota3);
+    document.getElementById('situacao').innerHTML += 'situaçaõ: Reprovado'
+    console.log('REPROVADO');
 
-console.log('A média do aluno é:' , media);
+}
+
 
 console.log('Fim do programa');
+
+}
