@@ -23,4 +23,3 @@ console.log('A nota 3 é:' , nota3);
 console.log('A média do aluno é:' , media);
 
 console.log('Fim do programa');
-
